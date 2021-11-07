@@ -1,6 +1,12 @@
 <?php
 
 /** Plugin Name: My REST API */
+
+if( ! defined ('ABSPATH')){
+    echo 'Sorry not authorized for your browser to accept this page...';
+    die;
+}
+
 function coinbase_charge_callback(){ //$data
     global $vs_data ;
     $payload          = file_get_contents( 'php://input' );
