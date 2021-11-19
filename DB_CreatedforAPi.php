@@ -34,20 +34,20 @@ function mz_install() {
 		    order_id mediumint(9),
     		order_key varchar(25),
 		    url varchar(150) DEFAULT '' NOT NULL,
-		    payment_amount_USD smallmoney,
+		    payment_amount_USD decimal(9,2),
 		    payment_currency_method varchar(9),
-		    payment_amount_crypto smallmoney,
+		    payment_amount_crypto decimal(10,9),
 		    confirmations int(3),
 		    transaction_id  varchar(9),
 		    status_oftimeline_array varchar(6000),
 		    description varchar(250),
 		    exchange_rates varchar(6000),
 		    id_of_event varchar(36) NOT NULL,
-		    total_deposits smallmoney NOT NULL,
-		    active_deposit smallmoney NOT NULL,
-		    balance smallmoney NOT NULL,
-		    withdrawals smallmoney NOT NULL,
-		    Pending smallmoney NOT NULL,
+		    total_deposits decimal(9,2) NOT NULL,
+		    active_deposit decimal(9,2) NOT NULL,
+		    balance decimal(9,2) NOT NULL,
+		    withdrawals  decimal(9,2) NOT NULL,
+		    Pending decimal(9,2) NOT NULL,
 		    PRIMARY KEY  (id)
 		    
 	) $charset_collate;";
@@ -119,11 +119,11 @@ function mz_install_data_R() {
             'status_oftimeline_array'   => 'Array_test..',
             'exchange_rates'            => 'arary',
             'id_of_event'               => 'TEST-9747-49c9-ae53-39d57072e4dd',
-            'total_deposits'            => '10',
-            'active_deposit'            => '0',
+            'total_deposits'            => '20.20',
+            'active_deposit'            => '12.23',
             'balance'                   => '10',
-            'withdrawals'               => '0',
-            'Pending'                   => '0',
+            'withdrawals'               => '1.25',
+            'Pending'                   => '0.25',
 		    
 		) 
 	);
