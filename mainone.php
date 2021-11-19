@@ -49,7 +49,7 @@ function coinbase_charge_callback(){
     $event_type         = $data['event']['type'];
     $code               = $data['event']['data']['code'];
 	$description_data   = $data['event']['data']['description'];
-	$payments           = $data['event']['data']['payments'][-1];
+	$payments           = $data['event']['data']['payments'];
 	$metadata           = $data['event']['data']['metadata'];
 
     //	status timeline data event
